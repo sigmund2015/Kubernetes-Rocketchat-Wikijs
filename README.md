@@ -26,8 +26,8 @@ A proposta desse desafio era poder subir alguns serviços em nuvem para facilita
 
 🎉  minikube 1.10.0 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.10.0
 
-
 💡  To disable this notice, run: 'minikube config set WantUpdateNotification false'
+
 🙄  minikube v1.9.2 on Darwin 10.11
 
 ✨  Using the virtualbox driver based on existing profile
@@ -43,12 +43,11 @@ A proposta desse desafio era poder subir alguns serviços em nuvem para facilita
 🏄  Done! kubectl is now configured to use "minikube"
 
 - Segunda etapa: Criando os arquivos de Manifestos formato yaml
-	- wikiJS
-	![docker-compose-wikijs.yaml ](https://drive.google.com/file/d/19zWeojD7u2W3mtkejyxhwr5ChaM_-QjK/view?usp=sharing)
+	- wikiJS 
+https://drive.google.com/file/d/19zWeojD7u2W3mtkejyxhwr5ChaM_-QjK/view?usp=sharing
 
 	 - Rocketchat
-
-![docker-compose-rocketchat.yaml ](https://drive.google.com/file/d/1RgnuIw64fP44mG4Qv9q3l8K6_WPNMb0I/view?usp=sharing)
+https://drive.google.com/file/d/1RgnuIw64fP44mG4Qv9q3l8K6_WPNMb0I/view?usp=sharing
 
 #### Requisitos técnicos
 - Debian 10
@@ -57,5 +56,3 @@ A proposta desse desafio era poder subir alguns serviços em nuvem para facilita
 - VirtualBox
 - wikiJS
 - RocketChat
-
-
