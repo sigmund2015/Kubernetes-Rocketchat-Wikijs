@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  mongodb:
+    image: mongo
+    environment:
+      - MODE= "swarm"
+      - COMPOSE_PROJECT_NAME= "mongodb"
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+      - AUTO_CRIAR_ENDPOINTS=false
+    volumes:
+      - /opt/mongodb/data:/data/db
+      - /opt/mongodb/log:/data/log
+      - /etc/localtime:/etc/localtime:ro
+    restart: on-failure:3 
+    mem_limit: 61440M 
+    mem_reservation: 20480M       
+    ports:
+      - "27017:27017"
+
+  ROCKETCHAT:
+    image: rocketchat/rocket.chat:latest
+    environment:
+      - MODE= "swarm"
+      - COMPOSE_PROJECT_NAME= "rocket chat"
+    volumes:
+      - /opt/app/uploads:/app/uploads
+    ports:
+      - "3000:3030" 
