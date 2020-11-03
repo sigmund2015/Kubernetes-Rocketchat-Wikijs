@@ -1,25 +1,46 @@
+DESAFIO ESIG -CARLOS SIGMUND
+A proposta desse desafio era poder subir alguns serviços em nuvem para facilitar a comunicação interna, bem como melhorar a documentos dos processos internos. Para atender a essa necessidade foi solicitado duas ferramentas que atendem aos requisitos: O RocketChat e o WikiJS . Tudo para texte aprisionado em um kubernete local (aqui foi utilizado o minikube)
 
-#### Installing a Windows Service
-1. First download / clone and compile the project.
-2. Open “Command Prompt” and run as administrator
-3. Fire the below command in the command prompt and press ENTER.
- 
-cd C:\Windows\Microsoft.NET\Framework\v4.0.30319 
+Descrição do Projeto Prático
+Primeira etapa: Instalação do kubernetes local (Minikube)
 
-4. Go to your project source folder > bin > Debug and copy the full path of your Windows Service exe file.
-5. Use the syntax InstallUtil.exe + Your copied path + \your service name + .exe
+verifique se a sua máquina suporta virtualização. No GNU/Linux, isto pode ser realizado com:
+grep -E --color ‘vmx|svm’ /proc/cpuinfo
+Caso a saída do comando não seja vazia, o resultado é positivo.
 
-Example: InstallUtil.exe C:\Users\MyUser\source\repos\WindowsServiceCheck\WindowsServiceCheck\bin\Debug\WindowsServiceCheck.exe
+instalar o kubectl com os seguintes comandos:
 
-#### Initializing the service.
-- By default the service will use the local system account. 
-  - If necessary, use a different account
-  [![Local System Account](https://i.imgur.com/TumrrJQ.png "Local System Account")](https://i.imgur.com/TumrrJQ.png "Local System Account")
-  
+ curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s 		https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+kubectl version --client
 
-#### Technical Requirements
- - [.NET Core 3.1](https://dotnet.microsoft.com/download/visual-studio-sdks?utm_source=getdotnetsdk&utm_medium=referral)
- - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/visual-studio-sdks?utm_source=getdotnetsdk&utm_medium=referral)
- - [Visual Studio 2019](https://visualstudio.microsoft.com/pt-br/downloads/)
- - [Windows Operating System](https://www.microsoft.com/software-download/windows10)
+Instalando o virtualbox
+https://github.com/sigmund2015/Oracle-VMBox-no-Debian-10
+Quando operando em conjunto com um hypervisor, o Minikube cria uma máquina virtual, onde dentro dela estarão todos os componentes do k8s para execução. Para realizar a inicialização desse ambiente, antes de executar o minikube, precisamos setar o VirtualBox como padrão para subir este ambiente, para que isso aconteça execute o comando:
+             minikube config set driver virtualbox
+         minikube start
+🎉 minikube 1.10.0 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.10.0
+💡 To disable this notice, run: ‘minikube config set WantUpdateNotification false’
+
+🙄 minikube v1.9.2 on Darwin 10.11
+✨ Using the virtualbox driver based on existing profile
+👍 Starting control plane node m01 in cluster minikube
+🔄 Restarting existing virtualbox VM for “minikube” …
+🐳 Preparing Kubernetes v1.19.1 on Docker 19.03.8 …
+🌟 Enabling addons: default-storageclass, storage-provisioner
+🏄 Done! kubectl is now configured to use “minikube”
+
+Segunda etapa: Criando os arquivos de Manifestos formato yaml
+wikiJS
+docker-compose-wikijs.yaml 	
+
+RocketChat
+docker-compose-rocketchat.yaml  
+
+Requisitos técnicos
+Debian 10
+Minikube
+Visual Studio Code
+VirtualBox
  
