@@ -54,5 +54,6 @@ A proposta desse desafio era poder subir alguns serviços em nuvem para facilita
 - Minikube
 - Visual Studio Code
 - VirtualBox
+https://drive.google.com/file/d/1RgnuIw64fP44mG4Qv9q3l8K6_WPNMb0I/view?usp=sharing
 
 
