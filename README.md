@@ -25,13 +25,21 @@ A proposta desse desafio era poder subir alguns serviços em nuvem para facilita
 
 
 🎉  minikube 1.10.0 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.10.0
+
+
 💡  To disable this notice, run: 'minikube config set WantUpdateNotification false'
 🙄  minikube v1.9.2 on Darwin 10.11
+
 ✨  Using the virtualbox driver based on existing profile
+
 👍  Starting control plane node m01 in cluster minikube
+
 🔄  Restarting existing virtualbox VM for "minikube" ...
+
 🐳  Preparing Kubernetes v1.19.1 on Docker 19.03.8 ...
+
 🌟  Enabling addons: default-storageclass, storage-provisioner
+
 🏄  Done! kubectl is now configured to use "minikube"
 
 - Segunda etapa: Criando os arquivos de Manifestos formato yaml
