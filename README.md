@@ -10,7 +10,7 @@ A proposta desse desafio era poder subir alguns serviços em nuvem para facilita
 
 	- instalar o `kubectl` com os seguintes comandos:
 	
-           curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s 		https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+           curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 	chmod +x ./kubectl
 	sudo mv ./kubectl /usr/local/bin/kubectl
 	kubectl version --client
@@ -25,6 +25,7 @@ A proposta desse desafio era poder subir alguns serviços em nuvem para facilita
 
 
 🎉  minikube 1.10.0 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.10.0
+
 💡  To disable this notice, run: 'minikube config set WantUpdateNotification false'
 
 🙄  minikube v1.9.2 on Darwin 10.11
@@ -41,7 +42,6 @@ A proposta desse desafio era poder subir alguns serviços em nuvem para facilita
 
 🏄  Done! kubectl is now configured to use "minikube"
 
-
 - Segunda etapa: Criando os arquivos de Manifestos formato yaml
 	- wikiJS
 	![docker-compose-wikijs.yaml 	](https://drive.google.com/file/d/19zWeojD7u2W3mtkejyxhwr5ChaM_-QjK/view?usp=sharing)
@@ -54,3 +54,5 @@ A proposta desse desafio era poder subir alguns serviços em nuvem para facilita
 - Minikube
 - Visual Studio Code
 - VirtualBox
+
+
